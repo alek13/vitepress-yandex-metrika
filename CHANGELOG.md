@@ -1,6 +1,36 @@
 # Changelog
 
 
+## v1.0.0
+
+[compare changes](https://github.com/hywax/vitepress-yandex-metrika/compare/v0.4.0...v1.0.0)
+
+### 💅 Refactors
+
+- ⚠️  Change EnhanceAppContext to Router in yandexMetrika function ([0261a61](https://github.com/hywax/vitepress-yandex-metrika/commit/0261a61))
+
+### 📖 Documentation
+
+- Update comments in README files for clarity ([4bc5037](https://github.com/hywax/vitepress-yandex-metrika/commit/4bc5037))
+
+### 🏡 Chore
+
+- Update CONTRIBUTORS ([c09f7f6](https://github.com/hywax/vitepress-yandex-metrika/commit/c09f7f6))
+- Update CONTRIBUTORS ([28551fb](https://github.com/hywax/vitepress-yandex-metrika/commit/28551fb))
+
+### 🎨 Styles
+
+- Lint new rules ([7b84443](https://github.com/hywax/vitepress-yandex-metrika/commit/7b84443))
+
+#### ⚠️ Breaking Changes
+
+- ⚠️  Change EnhanceAppContext to Router in yandexMetrika function ([0261a61](https://github.com/hywax/vitepress-yandex-metrika/commit/0261a61))
+
+### ❤️ Contributors
+
+- Hywax <a.hywax@gmail.com>
+- Bot ([@hywax-assistant](https://github.com/hywax-assistant))
+
 ## v0.4.0
 
 [compare changes](https://github.com/hywax/vitepress-yandex-metrika/compare/v0.3.4...v0.4.0)
