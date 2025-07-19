@@ -59,8 +59,8 @@ import { yandexMetrika } from '@hywax/vitepress-yandex-metrika'
 
 export default {
   extends: DefaultTheme,
-  enhanceApp(ctx) {
-    yandexMetrika(ctx, {
+  enhanceApp({ router }) {
+    yandexMetrika(router, {
       counter: {
         id: 12345678
       },

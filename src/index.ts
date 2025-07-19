@@ -1,4 +1,4 @@
-import type { EnhanceAppContext } from 'vitepress'
+import type { Router } from 'vitepress'
 
 export interface YandexMetrikaCounter {
   id: number
@@ -59,7 +59,7 @@ function injectCounter(counter: YandexMetrikaCounter, url?: string) {
   document.body.append(wrapper)
 }
 
-export function yandexMetrika(ctx: EnhanceAppContext, options: YandexMetrikaOptions) {
+export function yandexMetrika(router: Router, options: YandexMetrikaOptions) {
   if (!(options.enabled || true) || typeof window === 'undefined') {
     return
   }
@@ -73,10 +73,9 @@ export function yandexMetrika(ctx: EnhanceAppContext, options: YandexMetrikaOpti
     injectCounter(options.counter, options?.cdn?.watch)
   }
 
-  const { router } = ctx
-  const cacheAfterRouteChange = router.onAfterRouteChanged
+  const cacheAfterRouteChange = router.onAfterRouteChange
 
-  router.onAfterRouteChanged = (to: string) => {
+  router.onAfterRouteChange = (to: string) => {
     const counters = Object.values(window.Ya?._metrika.counters || {})
     counters.forEach((counter) => counter?.hit(to))
 
