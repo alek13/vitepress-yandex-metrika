@@ -2,7 +2,6 @@
 
 # VitePress Yandex Metrika
 
-
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
 [![License][license-src]][license-href]
@@ -54,8 +53,8 @@ Add `yandexMetrika` to the `enhanceApp` section of theme `index.ts`
 ```typescript
 // .vitepress/theme/index.ts
 import type { Theme } from 'vitepress'
-import DefaultTheme from 'vitepress/theme'
 import { yandexMetrika } from '@hywax/vitepress-yandex-metrika'
+import DefaultTheme from 'vitepress/theme'
 
 export default {
   extends: DefaultTheme,
@@ -75,27 +74,27 @@ You can customize the plugin `yandexMetrika` by passing the required parameters 
 
 ```typescript
 export interface YandexMetrikaOptions {
-  enabled?: boolean                                             // default: true
+  enabled?: boolean // default: true
   counter: YandexMetrikaCounter | YandexMetrikaCounter[]
   cdn?: {
-    tag?: string                                                // default: https://mc.yandex.ru/metrika/tag.js
-    watch?: string                                              // default: https://mc.yandex.ru/watch
+    tag?: string // default: https://mc.yandex.ru/metrika/tag.js
+    watch?: string // default: https://mc.yandex.ru/watch
   }
 }
 
 export interface YandexMetrikaCounter {
   id: number
   initParams?: {
-    defer?: boolean                                             // default: false
-    clickmap?: boolean                                          // default: true
-    trackLinks?: boolean                                        // default: true
-    accurateTrackBounce?: boolean                               // default: true
-    webvisor?: boolean                                          // default: false
-    ecommerce?: boolean | string | Array<string | boolean>      // default: false
-    trustedDomains?: string[]                                   // default: -
-    childIframe?: boolean                                       // default: false
-    type?: number                                               // default: 0
-    triggerEvent?: boolean                                      // default: false
+    defer?: boolean // default: false
+    clickmap?: boolean // default: true
+    trackLinks?: boolean // default: true
+    accurateTrackBounce?: boolean // default: true
+    webvisor?: boolean // default: false
+    ecommerce?: boolean | string | Array<string | boolean> // default: false
+    trustedDomains?: string[] // default: -
+    childIframe?: boolean // default: false
+    type?: number // default: 0
+    triggerEvent?: boolean // default: false
   }
 }
 ```

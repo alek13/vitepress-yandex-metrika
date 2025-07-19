@@ -53,8 +53,8 @@ npm install @hywax/vitepress-yandex-metrika -D
 ```typescript
 // .vitepress/theme/index.ts
 import type { Theme } from 'vitepress'
-import DefaultTheme from 'vitepress/theme'
 import { yandexMetrika } from '@hywax/vitepress-yandex-metrika'
+import DefaultTheme from 'vitepress/theme'
 
 export default {
   extends: DefaultTheme,
@@ -74,27 +74,27 @@ export default {
 
 ```typescript
 export interface YandexMetrikaOptions {
-  enabled?: boolean                                             // по умолчанию: true
+  enabled?: boolean // по умолчанию: true
   counter: YandexMetrikaCounter | YandexMetrikaCounter[]
   cdn?: {
-    tag?: string                                                // по умолчанию: https://mc.yandex.ru/metrika/tag.js
-    watch?: string                                              // по умолчанию: https://mc.yandex.ru/watch
+    tag?: string // по умолчанию: https://mc.yandex.ru/metrika/tag.js
+    watch?: string // по умолчанию: https://mc.yandex.ru/watch
   }
 }
 
 export interface YandexMetrikaCounter {
   id: number
   initParams?: {
-    defer?: boolean                                             // по умолчанию: false
-    clickmap?: boolean                                          // по умолчанию: true
-    trackLinks?: boolean                                        // по умолчанию: true
-    accurateTrackBounce?: boolean                               // по умолчанию: true
-    webvisor?: boolean                                          // по умолчанию: false
-    ecommerce?: boolean | string | Array<string | boolean>      // по умолчанию: false
-    trustedDomains?: string[]                                   // по умолчанию: -
-    childIframe?: boolean                                       // по умолчанию: false
-    type?: number                                               // по умолчанию: 0
-    triggerEvent?: boolean                                      // по умолчанию: false
+    defer?: boolean // по умолчанию: false
+    clickmap?: boolean // по умолчанию: true
+    trackLinks?: boolean // по умолчанию: true
+    accurateTrackBounce?: boolean // по умолчанию: true
+    webvisor?: boolean // по умолчанию: false
+    ecommerce?: boolean | string | Array<string | boolean> // по умолчанию: false
+    trustedDomains?: string[] // по умолчанию: -
+    childIframe?: boolean // по умолчанию: false
+    type?: number // по умолчанию: 0
+    triggerEvent?: boolean // по умолчанию: false
   }
 }
 ```
